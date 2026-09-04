@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 plugins {
     id "com.android.application" version "8.2.0" apply false
     id "org.jetbrains.kotlin.android" version "1.9.22" apply false
@@ -41,4 +42,49 @@ flutter {
     source '../..'
 }
 
+=======
+plugins {
+    id "com.android.application" version "8.2.0" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.22" apply false
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace "com.example.movieme_app"
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId "com.example.movieme_app"
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+>>>>>>> 09b6ec13fda0a88fd45f3fc59537389f04bf22b2
 dependencies {}
